@@ -1,0 +1,29 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: coffee-order
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: kosa01
+    password: 1234
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
